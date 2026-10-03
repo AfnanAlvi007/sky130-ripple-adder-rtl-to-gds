@@ -1,0 +1,11 @@
+read_verilog ripple_adder.v
+
+read_liberty -lib ~/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+synth -top ripple_adder
+
+dfflibmap -liberty ~/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+abc -liberty ~/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+write_verilog ripple_adder_with_lib.v
