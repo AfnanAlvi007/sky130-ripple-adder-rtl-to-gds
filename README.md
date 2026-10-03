@@ -7,6 +7,8 @@ This project demonstrates the complete **RTL-to-GDSII flow** of a 4-bit Ripple C
 The design was synthesized, placed, routed, and converted into a final GDSII layout using the Sky130HD technology library.
 
 ## Flow
+
+```
 Verilog RTL
     ↓
 Yosys Synthesis
@@ -20,6 +22,7 @@ Placement & Routing
 DEF Generation
     ↓
 KLayout GDSII Export
+```
 
 ## Tools Used
 
